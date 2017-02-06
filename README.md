@@ -10,7 +10,7 @@ So we're back to using the same codebase as we used in our mapStateToProps readm
 
 ```javascript
   handleOnClick(){
-    this.props.store.dispatch(getCountOfItems())
+    this.props.store.dispatch(addItem())
   }
 ```
 

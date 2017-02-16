@@ -1,3 +1,3 @@
-export function addItem(name){
-  return {type: 'GET_COUNT_OF_ITEMS'}
-}
+export const addItem = (name) => {
+  return { type: 'GET_COUNT_OF_ITEMS' };
+};

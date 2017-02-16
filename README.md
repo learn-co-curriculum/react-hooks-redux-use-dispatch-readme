@@ -9,7 +9,7 @@ What prevented us from fully removing a reference to __Redux__ inside our compon
 So we're back to using the same codebase as we used in our __mapStateToProps()__ readme.  Essentially, inside the `./src/App.js` file, you can see that clicking on a button dispatches an action to the store. In the __mapStateToProps()__ readme, we changed our code such that we no longer reference the store to get an updated state of the items, but we still do reference the store to dispatch the action.  If you look at the line inside the handleOnClick function, you'll see the culprit:
 
 ```javascript
-// ./src/app.js 
+// ./src/app.js
 ...
 
 handleOnClick(){
@@ -60,7 +60,7 @@ const mapStateToProps = (state) => {
 };
 
 /* code change */
-const mapDispatchToProps() {
+const mapDispatchToProps = () => {
   return {
     addItem: addItem
   };
@@ -80,7 +80,7 @@ handleOnClick() {
   this.props.addItem();
 }
 
-... 
+...
 ```
 
 So this code calls the __handleOnClick()__ function after the button is clicked. The __handleOnClick()__ references and then executes the __addItem()__ function by calling __this.props.addItem()__.  This code does call our action creator, but it's not good enough. Remember that action creator is just a simple JavaScript function and all it returns is return a plain old JavaScript object. So right now each time we click a button, we call our action creator. What we really want to do is call our action creator, and then dispatch the returned action to the store. Well by changing our __mapDispatchToProps()__ function a little so we can do just that.  
@@ -104,7 +104,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   /* code change */
   return bindActionCreators({
     addItem: addItem

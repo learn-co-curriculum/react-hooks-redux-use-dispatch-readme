@@ -173,6 +173,28 @@ We _could_ go further and get rid of `mapStateToProps()` as well, and handle it 
 export default connect(state => ({ items: state.items }), { addItem })(App);
 ```
 
+## Default Dispatch Behavior
+
+In addition to this, as per Dan Abramov, the creator of __Redux__:
+
+> By default mapDispatchToProps is just dispatch => ({ dispatch }). So if you
+don't specify the second argument to connect(), you'll get dispatch injected as
+a prop in your component.
+
+This means that if we were to simply write:
+
+```js
+export default connect(state => ({ items: state.items }))(App);
+```
+
+...we would _still_ have `this.props.dispatch()` available to us in App. If you
+would rather write `this.props.dispatch({ type: 'INCREASE_COUNT' })` in App, or
+pass `dispatch` down to children, you can!
+
+## Resources
+
+- [Dan Abramov Stack Overflow Response about mapDispatchToProps](https://stackoverflow.com/questions/34458261/how-to-get-simple-dispatch-from-this-props-using-connect-w-redux)
+
 ## Summary
 
 In this lesson we saw that we can remove all reference to our store from our

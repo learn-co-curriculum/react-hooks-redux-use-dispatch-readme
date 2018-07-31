@@ -126,7 +126,7 @@ The `handleOnClick()` references and then executes the `addItem()` function
 by calling `this.props.addItem()`.  
 
 There is an even simpler way to approach bundling our actions and `dispatch`
-into props. The second argument of `connect` accepts a function, as we've see,
+into props. The second argument of `connect` will accept a function (as we've seen)
 _or_ an object. If we pass in a function, `mapDispatchToProps()`, we must
 incorporate `dispatch`. If we pass in an object, `connect` handles this for us!
 

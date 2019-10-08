@@ -60,8 +60,8 @@ export default connect(mapStateToProps)(App);
 
 We can see that `mapStateToProps()` is already implemented and is
 making `state.items` available to `App` as `this.props.items`. We
-also see that the button in `render()` calls `handdeOnClick()` when
-clicked. The `handdeOnClick()` does one thing - it dispatches an action 
+also see that the button in `render()` calls `handleOnClick()` when
+clicked. The `handleOnClick()` does one thing - it dispatches an action 
 to the _store_.
 
 In the earlier `mapStateToProps()` Readme, we changed our code such that we no
@@ -79,7 +79,7 @@ handleOnClick(){
 ...
 ```
 
-Ok, so this may seem small, but it introduces our old problem. Our component is
+Okay, so this may seem small, but it introduces our old problem. Our component is
 no longer indifferent about its state management system. Instead, this line of
 code makes the component reliant on __Redux__.  
 
@@ -88,7 +88,7 @@ write code like `connect(mapStateToProps)(App)` to add new props to our __App__
 component, we can pass `connect()` a second argument, and add our _action
 creator_ as props. Then we can reference this action creator as a prop to call
 it from our component. We'll spend the rest of this lesson unpacking the
-previous sentence. Ok, let's see how this works.
+previous sentence. Okay, let's see how this works.
 
 #### Using `mapDispatchToProps`
 
@@ -162,7 +162,7 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
 
-Ok, so let's see what adding our `mapDispatchToProps()` function, and passing it
+Okay, so let's see what adding our `mapDispatchToProps()` function, and passing it
 through as a second argument accomplished. We'll place in another debugger in
 our component, right at the beginning of `render()`, just before the return
 statement. 

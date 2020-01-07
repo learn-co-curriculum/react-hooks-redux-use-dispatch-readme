@@ -6,12 +6,12 @@
 
 ### Introduction
 
-So as you remember, `mapStateToProps()` gives us a degree of separation of
-concerns by allowing us to not reference our store in our component when
-retrieving the state. It moved us towards having our state management in one
-part of our code, and our display of our state management in a different part.
-In other words, it started the process of removing knowledge of __Redux__ inside
-our components.  
+In the last lessons, we learned that `mapStateToProps()` separates
+concerns. We no longer have to reference the store inside our component when
+retrieving the state. We are moving towards having state management in one
+part of our code, and display logic in a different part.
+
+In other words, we're moving knowledge of _Redux_ outside our components.
 
 What prevented us from fully removing a reference to __Redux__ inside our
 components was that we did not know how to dispatch actions without calling

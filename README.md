@@ -329,3 +329,4 @@ In this lesson, we saw that we can remove all references to our store from our
 component via the `mapDispatchToProps()` function. We saw that
 `mapDispatchToProps()` allows us to bring in actions, combine them with
 `dispatch` and connect events on our page to actions in our store.
+

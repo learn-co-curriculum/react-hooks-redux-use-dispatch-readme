@@ -1,4 +1,4 @@
-# Using the useDispatch Hook Readme
+# Dispatching Actions with useDispatch
 
 ## Objectives
 

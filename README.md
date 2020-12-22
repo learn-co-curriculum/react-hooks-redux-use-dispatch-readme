@@ -126,3 +126,5 @@ components!
 ## Resources
 
 - [Redux: Using Action Creators](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns#using-action-creators)
+
+[use-dispatch]: https://react-redux.js.org/api/hooks#usedispatch

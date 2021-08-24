@@ -14,9 +14,10 @@ lesson.
 
 ## Identifying the Problem
 
-To begin, take a look at the starting code provided in `src/features/counter/Counter.js`:
+To begin, take a look at the starting code provided in
+`src/features/counter/Counter.js`:
 
-```js
+```jsx
 // ./src/features/counter/Counter.js
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -68,7 +69,7 @@ we need them is tedious and error prone. Remember, in the previous lesson on
 action creators, we created a function that _returns_ an action object instead.
 Let's try that out here as well:
 
-```js
+```jsx
 // ./src/features/counter/Counter.js
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";

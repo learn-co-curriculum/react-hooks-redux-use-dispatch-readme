@@ -1,6 +1,6 @@
 # Dispatching Actions with useDispatch
 
-## Objectives
+## Learning Goals
 
 - Write functions that connect Redux actions to component events
 
